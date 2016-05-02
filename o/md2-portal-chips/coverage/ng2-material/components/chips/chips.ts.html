@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ng2-material/components/chips/chips.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">ng2-material/components/chips/</a> chips.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">71.64% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>48/67</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">17.65% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/17</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">69.57% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>32/46</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {
+  Component,
+  Output,
+  HostListener,
+  ViewChild,
+  Input,
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  ApplicationRef
+} from "angular2/core";
+import {MdChip} from "./chip";
+import {MdChipInput} from "./chip_input";
+import "rxjs/add/operator/share";
+import {BehaviorSubject} from "rxjs/Rx";
+import {Subject} from "rxjs/Subject";
+import {uuid} from "../../core/util/uuid";
+import {Observable} from "rxjs/Observable";
+&nbsp;
+/** Basic data object for a chip. */
+export interface IMdChipData {
+  /** Human readable text to show on the chip */
+  label: string;
+  /** Unique ID to differentiate the chip from others in the list */
+  id: any;
+  /** Arbitrary user data associated with a chip. */
+  data?: any;
+}
+&nbsp;
+@Component({
+  selector: 'md-chips',
+  directives: [MdChip, MdChipInput],
+  template: `
+  &lt;md-chip *ngFor="#chip of collection$ | async" [chip]="chip"&gt;&lt;/md-chip&gt;
+  &lt;md-chip-input-container *ngIf="!(readonly$ | async)"&gt;
+    &lt;input md-chip-input [attr.placeholder]="placeholder$ | async"&gt;
+  &lt;/md-chip-input-container&gt;`,
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class MdChips {
+&nbsp;
+  constructor(public cdr: ChangeDetectorRef, public app: ApplicationRef) {
+  }
+&nbsp;
+  @ViewChild(MdChipInput) input: MdChipInput;
+&nbsp;
+  @HostListener('click') <span class="fstat-no" title="function not covered" >focusInput() {</span>
+<span class="cstat-no" title="statement not covered" >    if (this.input) {</span>
+<span class="cstat-no" title="statement not covered" >      this.input.focus();</span>
+    }
+  }
+&nbsp;
+  /** Collection of chip values over time */
+  @Output() collection$: Subject&lt;IMdChipData[]&gt; = new BehaviorSubject([]);
+&nbsp;
+  @Input() <span class="fstat-no" title="function not covered" >set collection(value: IMdChipData[])</span> {
+<span class="cstat-no" title="statement not covered" >    this._collection = value;</span>
+<span class="cstat-no" title="statement not covered" >    this.collection$.next(value);</span>
+  }
+&nbsp;
+  private _collection: IMdChipData[] = [];
+&nbsp;
+&nbsp;
+  /** Observable stream of `labels` property */
+  @Output() labels$: Observable&lt;string[]&gt; = this.collection$.map((chips) =&gt; chips.map(<span class="fstat-no" title="function not covered" >(c)</span> =&gt; <span class="cstat-no" title="statement not covered" >c.label)</span>);
+&nbsp;
+  /**
+   * Utility for binding simple string labels as chips. These are mapped
+   * internally to {@link IMdChipData} instances.
+   */
+  @Input() <span class="fstat-no" title="function not covered" >set labels(chips: string[])</span> {
+<span class="cstat-no" title="statement not covered" >    this.collection = chips.map(<span class="fstat-no" title="function not covered" >(c: string)</span> =&gt; <span class="cstat-no" title="statement not covered" >({label: c, id: uuid()}))</span>;</span>
+  }
+&nbsp;
+  /** Observable stream of `unique` property */
+  @Output() readonly$: Subject&lt;boolean&gt; = new BehaviorSubject&lt;boolean&gt;(false);
+&nbsp;
+  /** Chips are readonly (no input field) */
+  @Input() <span class="fstat-no" title="function not covered" >set readonly(value: boolean)</span> {
+<span class="cstat-no" title="statement not covered" >    this.readonly$.next(value);</span>
+  }
+&nbsp;
+  /** Observable stream of `unique` property */
+  @Output() placeholder$: Subject&lt;string&gt; = new BehaviorSubject&lt;string&gt;('');
+&nbsp;
+  /** Placeholder for input */
+  @Input() <span class="fstat-no" title="function not covered" >set placeholder(value: string)</span> {
+<span class="cstat-no" title="statement not covered" >    this.placeholder$.next(value);</span>
+  }
+&nbsp;
+  /** Observable stream of `unique` property */
+  @Output() unique$: Subject&lt;boolean&gt; = new BehaviorSubject&lt;boolean&gt;(true);
+&nbsp;
+  /** Chips have unique labels when true */
+  @Input() <span class="fstat-no" title="function not covered" >set unique(value: boolean)</span> {
+<span class="cstat-no" title="statement not covered" >    this._unique = value;</span>
+<span class="cstat-no" title="statement not covered" >    this.unique$.next(value);</span>
+  }
+&nbsp;
+  private _unique: boolean = true;
+&nbsp;
+  /** Observable stream of `deletable` property */
+  @Output() deletable$: Subject&lt;boolean&gt; = new BehaviorSubject&lt;boolean&gt;(true);
+&nbsp;
+  /** Chips have a remove icon that will delete them when clicked */
+  @Input()
+<span class="fstat-no" title="function not covered" >  set deletable(value: boolean)</span> {
+<span class="cstat-no" title="statement not covered" >    this.deletable$.next(value);</span>
+  }
+&nbsp;
+  /** Add a chip label to the collection */
+<span class="fstat-no" title="function not covered" >  add(chip: string, <span class="cstat-no" title="statement not covered" >id: string = uuid())</span></span> {
+<span class="cstat-no" title="statement not covered" >    if (!this._unique || this._collection.filter(<span class="fstat-no" title="function not covered" >(c)</span> =&gt; <span class="cstat-no" title="statement not covered" >c.label === chip)</span>.length === 0) {</span>
+<span class="cstat-no" title="statement not covered" >      this.collection = [...this._collection, {label: chip, id: id}];</span>
+    }
+  }
+&nbsp;
+  /** Remove a chip from the collection */
+<span class="fstat-no" title="function not covered" >  remove(chip: IMdChipData)</span> {
+<span class="cstat-no" title="statement not covered" >    this.collection = this._collection.filter(<span class="fstat-no" title="function not covered" >(c)</span> =&gt; <span class="cstat-no" title="statement not covered" >c.id !== chip.id)</span>;</span>
+  }
+&nbsp;
+  /** Pop the last chip */
+<span class="fstat-no" title="function not covered" >  removeLast() {</span>
+<span class="cstat-no" title="statement not covered" >    this.collection = this._collection.splice(0, this._collection.length - 1);</span>
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun May 01 2016 17:51:31 GMT-0700 (PDT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

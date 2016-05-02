@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ng2-material/components/chips/chip.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">ng2-material/components/chips/</a> chip.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">65.63% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>21/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">28.57% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">65.52% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>19/29</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {
+  Component,
+  Input,
+  ViewChild,
+  HostListener,
+  ContentChild,
+  forwardRef,
+  Inject,
+  ChangeDetectionStrategy
+} from "angular2/core";
+import {MdIcon} from "../icon/icon";
+import {MdChips, IMdChipData} from "./chips";
+import {TemplatePortalDirective, PortalHostDirective} from "@angular2-material/core";
+import {MdChipRemove} from "./chip_remove";
+import {MdChipContent} from "./chip_content";
+&nbsp;
+@Component({
+  selector: 'md-chip',
+  directives: [MdIcon, MdChipContent, MdChipRemove, TemplatePortalDirective, PortalHostDirective],
+  template: `
+&lt;template md-chip-content&gt;{{chip.label}}&lt;/template&gt;
+&lt;template md-chip-remove&gt;
+  &lt;button class="md-chip-remove" (click)="chips.remove(chip)" type="button"&gt;
+    &lt;i md-icon&gt;cancel&lt;/i&gt;
+    &lt;span class="md-visually-hidden"&gt;close&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/template&gt;
+&lt;div class="md-chip-content" role="button"&gt;
+  &lt;template [portalHost]="chipTemplate"&gt;&lt;/template&gt;
+&lt;/div&gt;
+&lt;div class="md-chip-remove-container" [style.display]="(chips.deletable$ | async) ? 'block' : 'none'"&gt;
+  &lt;template [portalHost]="removeTemplate"&gt;&lt;/template&gt;
+&lt;/div&gt;`,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    '[class.md-deletable]': 'chips.deletable$ | async'
+  }
+})
+export class MdChip {
+<span class="fstat-no" title="function not covered" >  constructor(@Inject(forwardRef(() =&gt; MdChips)) private <span class="cstat-no" title="statement not covered" >chips: MdChips)</span></span> {
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  chipTemplate: TemplatePortalDirective = null;</span>
+<span class="cstat-no" title="statement not covered" >  removeTemplate: TemplatePortalDirective = null;</span>
+&nbsp;
+  @ViewChild(MdChipContent)
+<span class="fstat-no" title="function not covered" >  private set viewChip(value: TemplatePortalDirective)</span> {
+<span class="cstat-no" title="statement not covered" >    if (value) {</span>
+<span class="cstat-no" title="statement not covered" >      this.chipTemplate = value;</span>
+    }
+  }
+&nbsp;
+  @ViewChild(MdChipRemove)
+<span class="fstat-no" title="function not covered" >  private set viewRemove(value: TemplatePortalDirective)</span> {
+<span class="cstat-no" title="statement not covered" >    if (value) {</span>
+<span class="cstat-no" title="statement not covered" >      this.removeTemplate = value;</span>
+    }
+&nbsp;
+  }
+&nbsp;
+  @ContentChild(MdChipContent)
+<span class="fstat-no" title="function not covered" >  private set contentChip(value: TemplatePortalDirective)</span> {
+<span class="cstat-no" title="statement not covered" >    if (value) {</span>
+<span class="cstat-no" title="statement not covered" >      this.chipTemplate = value;</span>
+    }
+  }
+&nbsp;
+  @ContentChild(MdChipRemove)
+<span class="fstat-no" title="function not covered" >  private set contentRemove(value: TemplatePortalDirective)</span> {
+<span class="cstat-no" title="statement not covered" >    if (value) {</span>
+<span class="cstat-no" title="statement not covered" >      this.removeTemplate = value;</span>
+    }
+  }
+&nbsp;
+  @Input() chip: IMdChipData;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun May 01 2016 17:51:31 GMT-0700 (PDT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

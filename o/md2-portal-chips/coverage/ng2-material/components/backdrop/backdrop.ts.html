@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ng2-material/components/backdrop/backdrop.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">ng2-material/components/backdrop/</a> backdrop.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">98.44% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>63/64</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">96.97% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>32/33</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.89% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">98.33% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>59/60</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157</td><td class="line-coverage quiet"><span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">88×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">88×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">88×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">88×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">88×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">88×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">88×</span>
+<span class="cline-any cline-yes">88×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">88×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">88×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">88×</span>
+<span class="cline-any cline-yes">88×</span>
+<span class="cline-any cline-yes">88×</span>
+<span class="cline-any cline-yes">88×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">40×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">88×</span>
+<span class="cline-any cline-yes">86×</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {Animate} from "../../core/util/animate";
+import {ElementRef, ViewEncapsulation, Component, Input, Output, EventEmitter} from "angular2/core";
+import {DOM} from "angular2/src/platform/dom/dom_adapter";
+import {ViewportHelper} from "../../core/util/viewport";
+&nbsp;
+/**
+ * An overlay for content on the page.
+ * Can optionally dismiss when clicked on.
+ * Has outputs for show/showing and hide/hiding.
+ */
+@Component({
+  selector: 'md-backdrop',
+  template: '',
+  encapsulation: ViewEncapsulation.None,
+  host: {
+    'class': 'md-backdrop',
+    '(click)': 'onClick()',
+  },
+})
+export class MdBackdrop {
+&nbsp;
+  /**
+   * When true, clicking on the backdrop will close it
+   */
+  @Input()
+  clickClose: boolean = false;
+&nbsp;
+  /**
+   * When true, disable the parent container scroll while the backdrop is active.
+   */
+  @Input()
+  hideScroll: boolean = true;
+&nbsp;
+  /**
+   * Emits when the backdrop begins to hide.
+   */
+  @Output()
+  onHiding: EventEmitter&lt;MdBackdrop&gt; = new EventEmitter&lt;MdBackdrop&gt;(false);
+&nbsp;
+  /**
+   * Emits when the backdrop has finished being hidden.
+   */
+  @Output()
+  onHidden: EventEmitter&lt;MdBackdrop&gt; = new EventEmitter&lt;MdBackdrop&gt;(false);
+&nbsp;
+&nbsp;
+  /**
+   * Emits when the backdrop begins to be shown.
+   */
+  @Output()
+  onShowing: EventEmitter&lt;MdBackdrop&gt; = new EventEmitter&lt;MdBackdrop&gt;();
+&nbsp;
+  /**
+   * Emits when the backdrop has finished being shown.
+   */
+  @Output()
+  onShown: EventEmitter&lt;MdBackdrop&gt; = new EventEmitter&lt;MdBackdrop&gt;();
+&nbsp;
+  constructor(public element: ElementRef, public viewport: ViewportHelper) {
+    this._body = DOM.querySelector(viewport.getDocumentNativeElement(), 'body');
+  }
+&nbsp;
+  /**
+   * The CSS class name to transition on/off when the backdrop is hidden/shown.
+   */
+  @Input()
+  public transitionClass: string = 'md-active';
+&nbsp;
+  /**
+   * Whether to add the {@see transitionClass} or remove it when the backdrop is shown. The
+   * opposite will happen when the backdrop is hidden.
+   */
+  @Input()
+  public transitionAddClass = true;
+&nbsp;
+&nbsp;
+  /**
+   * Whether the backdrop is visible.
+   */
+  get visible(): boolean {
+    return this._visible;
+  }
+&nbsp;
+  @Input()
+<span class="fstat-no" title="function not covered" >  set visible(value: boolean)</span> {
+<span class="cstat-no" title="statement not covered" >    this.toggle(value);</span>
+  }
+&nbsp;
+  protected _visible: boolean = false;
+  private _transitioning: boolean = false;
+  private _previousOverflow: string = null;
+  private _body: HTMLElement = null;
+&nbsp;
+  onClick() {
+    if (this.clickClose &amp;&amp; !this._transitioning &amp;&amp; this.visible) {
+      this.hide();
+    }
+  }
+&nbsp;
+&nbsp;
+  /**
+   * Hide the backdrop and return a promise that is resolved when the hide animations are
+   * complete.
+   */
+  hide(): Promise&lt;any&gt; {
+    return this.toggle(false);
+  }
+&nbsp;
+  /**
+   * Show the backdrop and return a promise that is resolved when the show animations are
+   * complete.
+   */
+  show(): Promise&lt;any&gt; {
+    return this.toggle(true);
+  }
+&nbsp;
+  /**
+   * Toggle the visibility of the backdrop.
+   * @param visible whether or not the backdrop should be visible
+   * @returns {any}
+   */
+  toggle(<span class="missing-if-branch" title="if path not taken" >I</span>visible: boolean = !this.visible): any {
+    if (visible === this._visible) {
+      return Promise.resolve();
+    }
+&nbsp;
+    let beginEvent = visible ? this.onShowing : this.onHiding;
+    let endEvent = visible ? this.onShown : this.onHidden;
+&nbsp;
+    this._visible = visible;
+    this._transitioning = true;
+    beginEvent.emit(this);
+    let action = visible ?
+      (this.transitionAddClass ? Animate.enter : Animate.leave) :
+      (this.transitionAddClass ? Animate.leave : Animate.enter);
+&nbsp;
+    // Page scroll
+    if (visible &amp;&amp; this.hideScroll &amp;&amp; this.element &amp;&amp; !this._previousOverflow) {
+      let style = DOM.getStyle(this._body, 'overflow');
+      if (style !== 'hidden') {
+        this._previousOverflow = style;
+        DOM.setStyle(this._body, 'overflow', 'hidden');
+      }
+    }
+    else if (!visible &amp;&amp; this.hideScroll &amp;&amp; this.element &amp;&amp; this._previousOverflow !== null) {
+      DOM.setStyle(this._body, 'overflow', this._previousOverflow);
+      this._previousOverflow = null;
+    }
+&nbsp;
+    // Animate transition class in/out and then finally emit the completed event.
+    return action(this.element.nativeElement, this.transitionClass).then(() =&gt; {
+      this._transitioning = false;
+      endEvent.emit(this);
+    });
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun May 01 2016 17:51:31 GMT-0700 (PDT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
