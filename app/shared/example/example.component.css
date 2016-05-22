@@ -1,0 +1,58 @@
+/**
+ * Mixin that creates a new stacking context.
+ * see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
+ */
+:host {
+  display: block;
+  position: relative;
+  transform: translate3D(0, 0, 0); }
+  :host md-toolbar.demo-toolbar {
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 1px rgba(255, 255, 255, 0.1); }
+    :host md-toolbar.demo-toolbar .md-icon-button {
+      margin-right: 0; }
+    :host md-toolbar.demo-toolbar .material-icons {
+      color: white; }
+  :host .doc-content {
+    margin: 24px 0; }
+  :host .demo-container {
+    border-radius: 4px;
+    margin-bottom: 16px;
+    -webkit-transition: 0.02s padding cubic-bezier(0.35, 0, 0.25, 1);
+    transition: 0.02s padding cubic-bezier(0.35, 0, 0.25, 1);
+    position: relative;
+    padding-bottom: 0;
+    background-color: white; }
+  :host .demo-source-tabs {
+    z-index: 1;
+    -webkit-transition: all 0.45s cubic-bezier(0.35, 0, 0.25, 1);
+    transition: all 0.45s cubic-bezier(0.35, 0, 0.25, 1);
+    height: 448px;
+    max-height: 0;
+    background: #fff;
+    overflow: hidden; }
+    :host .demo-source-tabs.shown {
+      max-height: 448px; }
+  :host .demo-source-tabs.ng-hide {
+    min-height: 0;
+    height: 0; }
+  :host .demo-source-tabs {
+    position: relative;
+    width: 100%;
+    z-index: 0; }
+  :host .demo-content {
+    position: relative;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  :host .demo-content > div[layout-fill] {
+    min-height: 448px; }
+  :host .demo-source-container {
+    display: block;
+    height: 400px; }
+  :host md-tabs-content-wrapper {
+    max-height: 448px; }

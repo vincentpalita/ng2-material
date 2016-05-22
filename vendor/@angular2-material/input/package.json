@@ -1,0 +1,55 @@
+{
+  "name": "@angular2-material/input",
+  "version": "2.0.0-alpha.4",
+  "description": "Angular 2 Material input",
+  "main": "./input.js",
+  "typings": "./input.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/material2.git"
+  },
+  "keywords": [
+    "angular",
+    "material",
+    "material design",
+    "components",
+    "input",
+    "text",
+    "textarea"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angular/material2/issues"
+  },
+  "homepage": "https://github.com/angular/material2#readme",
+  "peerDependencies": {
+    "@angular2-material/core": "2.0.0-alpha.4"
+  },
+  "_id": "@angular2-material/input@2.0.0-alpha.4",
+  "scripts": {},
+  "_shasum": "8ef9994bf451c17755ffbe6d35894cd8b7472055",
+  "_from": "@angular2-material/input@>=2.0.0-alpha.4 <3.0.0",
+  "_resolved": "https://registry.npmjs.org/@angular2-material/input/-/input-2.0.0-alpha.4.tgz",
+  "_npmVersion": "3.8.3",
+  "_nodeVersion": "5.10.0",
+  "_npmUser": {
+    "name": "angular2-material",
+    "email": "angular-core+npm@google.com"
+  },
+  "dist": {
+    "shasum": "8ef9994bf451c17755ffbe6d35894cd8b7472055",
+    "tarball": "https://registry.npmjs.org/@angular2-material/input/-/input-2.0.0-alpha.4.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "angular2-material",
+      "email": "angular-core+npm@google.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/input-2.0.0-alpha.4.tgz_1462344272521_0.5259332496207207"
+  },
+  "directories": {},
+  "readme": "ERROR: No README data found!"
+}
