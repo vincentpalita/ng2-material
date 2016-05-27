@@ -129,7 +129,7 @@ export class MdPeekaboo implements OnDestroy {
       if (!!this._app.tick) {
         this._app.tick();
       }
-    }, 100, this);
+    }, 1500, this);
   }
 
   ngOnDestroy(): any {

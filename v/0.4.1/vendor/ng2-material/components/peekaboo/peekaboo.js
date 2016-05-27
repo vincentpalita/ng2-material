@@ -41,7 +41,7 @@ var MdPeekaboo = (function () {
             if (!!_this._app.tick) {
                 _this._app.tick();
             }
-        }, 100, this);
+        }, 1500, this);
     }
     MdPeekaboo.MakeNumber = function (value) {
         return typeof value === 'string' ? parseInt(value, 10) : value;

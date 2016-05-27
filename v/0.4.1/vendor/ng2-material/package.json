@@ -1,6 +1,6 @@
 {
   "name": "ng2-material",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "ng2-material --- [![Build Status](https://travis-ci.org/justindujardin/ng2-material.svg?branch=master)](https://travis-ci.org/justindujardin/ng2-material) [![Coverage Status](https://coveralls.io/repos/justindujardin/ng2-material/badge.svg?branch=master&service=github)](https://coveralls.io/github/justindujardin/ng2-material?branch=master)  [![npm version](https://badge.fury.io/js/ng2-material.svg)](http://badge.fury.io/js/ng2-material)  [![Join the chat at https://gitter.im/justindujardin/ng2-material](https://badges.gitter.im/justindujardin/ng2-material.svg)](https://gitter.im/justindujardin/ng2-material?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Sauce Test Status](https://saucelabs.com/browser-matrix/ng2material.svg)](https://saucelabs.com/u/ng2material)",
   "main": "./index.js",
   "repository": {
@@ -104,6 +104,10 @@
       "email": "dotansimha@gmail.com"
     },
     {
+      "name": "Ferdinand Torggler",
+      "email": "ferdinand.torggler@gmail.com"
+    },
+    {
       "name": "Lukas Ruebbelke",
       "email": "simpul@gmail.com"
     },
@@ -140,6 +144,10 @@
       "email": "samuel.jones@q-free.com"
     },
     {
+      "name": "Alexander Zeiher",
+      "email": "alexander@zeiher.se"
+    },
+    {
       "name": "BIZID Amine",
       "email": "amine.bizid@gmail.com"
     },
@@ -158,10 +166,6 @@
     {
       "name": "Daniel Rasmuson",
       "email": "dan123911@gmail.com"
-    },
-    {
-      "name": "Ferdinand Torggler",
-      "email": "ferdinand.torggler@gmail.com"
     }
   ],
   "readme": "ng2-material\n---\n[![Build Status](https://travis-ci.org/justindujardin/ng2-material.svg?branch=master)](https://travis-ci.org/justindujardin/ng2-material)\n[![Coverage Status](https://coveralls.io/repos/justindujardin/ng2-material/badge.svg?branch=master&service=github)](https://coveralls.io/github/justindujardin/ng2-material?branch=master) \n[![npm version](https://badge.fury.io/js/ng2-material.svg)](http://badge.fury.io/js/ng2-material) \n[![Join the chat at https://gitter.im/justindujardin/ng2-material](https://badges.gitter.im/justindujardin/ng2-material.svg)](https://gitter.im/justindujardin/ng2-material?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)\n[![Sauce Test Status](https://saucelabs.com/browser-matrix/ng2material.svg)](https://saucelabs.com/u/ng2material)\n\nng2-material is a set of components, built on top of [@angular2-material/core](https://github.com/angular/material2), and a site full of examples of how to use them. The site contains examples for community \ndeveloped components as well as the official material2 components.\n\nCheck out the [examples site](https://justindujardin.github.io/ng2-material/) for demos and instructions on getting started.\n\n## Getting Help\n\n**IMPORTANT**: This project is provided as-is, and no commercial level of support is given to it. If you need perfect compatbility with IE or great getting started materials for your specific use-case, you may be better off waiting for an official release of material2.\n\nThat being said, if something is wrong with your installation or with the existing examples or materials, please try to provide a Plunkr example reproducing your problem, and file an issue.\n\n## Credits \n\nThis project is based on the components and styles defined in the \n[Angular Material](https://github.com/angular/material) and [Angular 2](https://github.com/angular/angular) projects. \n\n## Sponsors\n\nng2-material is an open source project sponsored by JetBrains. Most of ng2-material has been built in WebStorm, an excellent IDE for angular2 and Typescript development. \n\nMajor project contributors are eligible to be granted an all-products JetBrains license, for development of ng2-material. \n\n<a href=\"https://www.jetbrains.com/\" target=\"_blank\"><img src=\"https://rawgit.com/justindujardin/ng2-material/master/public/images/logo_jetbrains.svg\" width=\"256\"></a>\n<a href=\"https://www.jetbrains.com/webstorm/\" target=\"_blank\"><img src=\"https://rawgit.com/justindujardin/ng2-material/master/public/images/logo_webstorm.svg\" width=\"256\"></a>\n\n## License \n\nThis project is MIT licensed.\n\n- [Angular Material](https://github.com/angular/material) is licensed: [MIT](https://github.com/angular/material/blob/master/LICENSE)\n- [Angular 2.0](https://github.com/angular/angular) is licensed: [MIT](https://github.com/angular/angular/blob/master/LICENSE)\n",
@@ -169,8 +173,8 @@
     "url": "https://github.com/justindujardin/ng2-material/issues"
   },
   "homepage": "https://github.com/justindujardin/ng2-material#readme",
-  "_id": "ng2-material@0.4.0",
-  "_shasum": "feccf7be98bf4003380b02cb1652d45904b54ad2",
+  "_id": "ng2-material@0.4.1",
+  "_shasum": "1d2b51f2be146c4631b16c6c1c861f1bb65e2265",
   "_from": "../../dist",
   "_resolved": "file:../../dist"
 }
