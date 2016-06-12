@@ -128,6 +128,12 @@ module.exports = function (grunt) {
         ],
         tasks: ['site-meta', 'build-npm-package', 'notify:meta']
       },
+      examples: {
+        files: [
+          '<%- outPath %>/**/*'
+        ],
+        tasks: ['examples-sync']
+      },
       ts: {
         files: [
           '<%- sourceRoot %>/**/*.ts'
@@ -212,7 +218,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-ts');
   grunt.loadNpmTasks('remap-istanbul');
   grunt.registerTask('default', ['ts', 'sass', 'postcss', 'site-meta', 'rewrite-source-maps']);
-  grunt.registerTask('develop', ['default', 'watch']);
+  grunt.registerTask('develop', ['default', 'examples-sync', 'watch']);
   grunt.registerTask('serve', ['default', 'connect', 'watch']);
   grunt.registerTask('cover', ['karma:cover', 'remapIstanbul', 'site-meta']);
   grunt.registerTask('site', ['build', 'cover', 'copy:site']);
@@ -269,7 +275,7 @@ module.exports = function (grunt) {
     glob("dist/**/*.js.map", function (err, files) {
       files.forEach(function rewriteSourceMap(sourceMapFileName) {
         const data = fs.readFileSync(sourceMapFileName).toString();
-        fs.writeFileSync(sourceMapFileName,data.replace("../src/", "src/"));
+        fs.writeFileSync(sourceMapFileName, data.replace("../src/", "src/"));
       });
       done();
     });
@@ -288,6 +294,26 @@ module.exports = function (grunt) {
         return grunt.fatal(err.message.replace(/\n$/, '.'));
       }
       grunt.log.ok('Published to NPM' + (tag ? ' @' + tag : ''));
+      done();
+    });
+  });
+
+  grunt.registerTask('examples-sync', 'sync the current development components with example site', function (tag) {
+
+    var done = this.async();
+    var util = require('util');
+    var spawn = require('child_process').spawn;
+
+    process.chdir('modules/site');
+    var updateProc = spawn('sh', ['update.sh']);
+
+    updateProc.stdout.on('data', function (data) {
+      grunt.log.ok(data);
+    });
+
+    updateProc.on('exit', function (code) {
+      process.chdir('../../');
+      grunt.log.ok('Synced dev build with node_modules of site app');
       done();
     });
   });
