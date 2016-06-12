@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["index.ts"],"names":[],"mappings":";AAAA,8CAA0C,iCAAiC,CAAC;AAApE,kGAAoE;AAC5E,oCAAiC,uBAAuB,CAAC;AAAjD,sEAAiD","sourcesContent":["export {HighlightContainerComponent} from './highlight-container.component';\nexport {HighlightComponent} from './highlight.component';\n"]}
